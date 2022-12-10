@@ -135,7 +135,7 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   <Component id="cadenacomputar" max="32767" attributes="0"/>
-                                  <Component id="jTextField1" alignment="0" pref="322" max="32767" attributes="0"/>
+                                  <Component id="campo" alignment="0" pref="322" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -160,7 +160,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cadenacomputar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="137" max="-2" attributes="0"/>
+                      <Component id="campo" min="-2" pref="137" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="menu2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -187,9 +187,9 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadenacomputarActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="campo">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="menu2">

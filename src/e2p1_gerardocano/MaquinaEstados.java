@@ -13,8 +13,8 @@ import java.util.Arrays;
  */
 public class MaquinaEstados {
     ArrayList <String> estados;
-    ArrayList <String> estados_aceptacion;
-    ArrayList <String> aristas;
+    ArrayList <String> estados_aceptacion = new ArrayList<>();
+    ArrayList <String> aristas = new ArrayList<>();
     String estado_actual;
 
     public MaquinaEstados(String estados, String aristas) {

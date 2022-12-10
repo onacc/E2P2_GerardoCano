@@ -9,7 +9,9 @@ package e2p1_gerardocano;
  * @author gcano
  */
 public class Menu extends javax.swing.JFrame {
-//MaquinaEstados M = new MaquinaEstados();
+    
+    MaquinaEstados M;
+    
     /**
      * Creates new form Menu
      */
@@ -41,7 +43,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         cadenacomputar = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        campo = new javax.swing.JTextField();
         menu2 = new javax.swing.JButton();
         compi = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -135,9 +137,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        campo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                campoActionPerformed(evt);
             }
         });
 
@@ -169,7 +171,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel6)
                             .addComponent(cadenacomputar)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE))))
+                            .addComponent(campo, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(78, 78, 78)
@@ -188,7 +190,7 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadenacomputar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(campo, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(menu2)
@@ -287,7 +289,10 @@ public class Menu extends javax.swing.JFrame {
         computarcadenass.setSize(400,500);
         computarcadenass.setLocationRelativeTo(null);
         computarcadenass.setVisible(true);
-       dispose();
+        
+        
+        
+        dispose();
     }//GEN-LAST:event_evalcadActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
@@ -300,11 +305,13 @@ public class Menu extends javax.swing.JFrame {
 
     private void estadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadosActionPerformed
         
+       
     }//GEN-LAST:event_estadosActionPerformed
 
     private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
         Crearmaq.dispose();
         setVisible(true);
+        M = new MaquinaEstados(estados.getText(),transicciones.getText());
     }//GEN-LAST:event_createActionPerformed
 
     private void cadenacomputarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadenacomputarActionPerformed
@@ -312,7 +319,8 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_cadenacomputarActionPerformed
 
     private void compiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compiActionPerformed
-        // TODO add your handling code here:
+        //M.computestr(cadenacomputar.getText());
+        campo.setText(M.computestr(cadenacomputar.getText()));
     }//GEN-LAST:event_compiActionPerformed
 
     private void menu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu2ActionPerformed
@@ -320,9 +328,9 @@ public class Menu extends javax.swing.JFrame {
         setVisible(true);
     }//GEN-LAST:event_menu2ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void campoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoActionPerformed
+            
+    }//GEN-LAST:event_campoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -332,6 +340,7 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame Crearmaq;
     private javax.swing.JTextField cadenacomputar;
+    private javax.swing.JTextField campo;
     private javax.swing.JButton compi;
     private javax.swing.JFrame computarcadenass;
     private javax.swing.JButton crear;
@@ -347,7 +356,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton menu2;
     private javax.swing.JButton salir;
     private javax.swing.JTextField transicciones;
